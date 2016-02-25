@@ -6,6 +6,5 @@ from app import app
 def index():
 	user = {'nickname': 'Roland'} # fake user
 	return render_template('index.html',
-							title ='Home',
 							user=user)
 	
