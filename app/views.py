@@ -5,6 +5,18 @@ from app import app
 @app.route('/index')
 def index():
 	user = {'nickname': 'Roland'} # fake user
+	posts = [ # fake array of posts
+		{
+			'author': {'nickname': 'John'},
+			'body': 'Beautiful day in San Francisco!'
+		},
+		{
+			'author': {'nickname': 'Susan'},
+			'body': 'Great!'
+		}
+	]
 	return render_template('index.html',
-							user=user)
+							title='Home',
+							user=user,
+							posts=posts)
 	
